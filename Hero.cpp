@@ -8,7 +8,7 @@ Shape Hero::_shape(9, 3,
                 std::string(">>@@@@@>>") +
                 std::string("/  @@@>  "));
 
-Hero::Hero(int x, int y, int nlives) : AObject(x, y, 100, nlives, 100, 0)
+Hero::Hero(int x, int y, int nlives) : AObject(x, y, 100, nlives, 100, 0, 'y')
 {
     this->_hp = _maxHp;
 }

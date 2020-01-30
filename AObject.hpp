@@ -18,10 +18,11 @@ class AObject
         int _lives;
         int _damage;
         int _val;
+        char _colour;
         AObject(const AObject &);
         AObject &operator=(const AObject &);
     public:
-        AObject(int x, int y, int maxhp, int lives, int damage, int val);
+        AObject(int x, int y, int maxhp, int lives, int damage, int val, char colour);
         virtual ~AObject();
         virtual bool outOfGame(WINDOW *) const;
         virtual bool killed() const;

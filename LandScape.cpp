@@ -10,7 +10,7 @@ static std::string generateShape(int height)
 }
 
 LandScape::LandScape(int x, int bottom, int height, int velocity):
-AObject(x, bottom - height + 1, 1000, 100, 100, 0), _velocity(-velocity),
+AObject(x, bottom - height + 1, 1000, 100, 100, 0, 'g'), _velocity(-velocity),
 _shape(1, height, generateShape(height))
 {
 }

@@ -1,8 +1,8 @@
 #include "AObject.hpp"
 #include <unistd.h>
 
-AObject::AObject(int x, int y, int maxHp, int lives, int damage, int val):
-_x(x), _y(y), _hp(maxHp), _maxHp(maxHp), _lives(lives), _damage(damage), _val(val)
+AObject::AObject(int x, int y, int maxHp, int lives, int damage, int val, char colour):
+_x(x), _y(y), _hp(maxHp), _maxHp(maxHp), _lives(lives), _damage(damage), _val(val), _colour(colour)
 {
 }
 
@@ -94,7 +94,19 @@ void AObject::processCollision(AObject *ob)
 void AObject::draw(WINDOW *w)
 {
     const Shape &shape(this->getShape());
-
+    if (this->_colour != 'n')
+    {
+        start_color();
+        if (this->_colour == 'r')
+            init_pair(this->_colour, COLOR_RED, COLOR_BLACK);
+        if (this->_colour == 'y')
+            init_pair(this->_colour, COLOR_YELLOW, COLOR_BLACK);
+        if (this->_colour == 'g')
+            init_pair(this->_colour, COLOR_GREEN, COLOR_BLACK);
+        if (this->_colour == 'w')
+            init_pair(this->_colour, COLOR_WHITE, COLOR_BLACK);
+        wattron(w, COLOR_PAIR(this->_colour));
+    }
     for (int y = 0; y < shape.getSizeY(); y++)
     {
         for (int x = 0; x < shape.getSizeX(); x++)
@@ -102,6 +114,8 @@ void AObject::draw(WINDOW *w)
             mvwaddch(w, y + this->_y, x + this->_x, shape.getElement(x, y));
         }
     }
+    if (this->_colour != 'n')
+        wattroff(w, COLOR_PAIR(this->_colour));
     
 }
 

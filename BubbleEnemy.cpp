@@ -4,7 +4,7 @@
 Shape BubbleEnemy::_shape(1, 1, "o");
 
 BubbleEnemy::BubbleEnemy(int x, int y, int velocity):
-AObject(x, y, 1, 1, 10, 0), _velocity(-velocity)
+AObject(x, y, 1, 1, 10, 0, 'w'), _velocity(-velocity)
 {
 }
 

@@ -6,7 +6,7 @@
 /*   By: snechaev <snechaev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/19 20:25:45 by jcruz-y-          #+#    #+#             */
-/*   Updated: 2020/01/29 15:34:34 by snechaev         ###   ########.fr       */
+/*   Updated: 2020/01/29 16:22:42 by snechaev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Shape Enemy::_shape(9, 3,
             std::string("    \\    "));    
 
 Enemy::Enemy(int x, int y, int velocity):
-AObject(x, y, 1, 1, 50, 1), _velocity(-velocity)
+AObject(x, y, 1, 1, 50, 1, 'r'), _velocity(-velocity)
 {
     this->_hp = _maxHp;
 }
