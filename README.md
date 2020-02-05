@@ -1,2 +1,4 @@
 # Retro-arcade-game
-![GitHub Screen shot](screens/Screen_Shot)
+
+![GitHub Screen shot](screens/Screen_Shot.png)
+
