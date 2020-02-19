@@ -243,11 +243,11 @@ void Game::displayScore(WINDOW *w, Hero *hero)
     mvwprintw(stdscr, getbegy(w) + 5, getbegx(w) + 2, "Score: %d", this->getScore());
 
 
-    mvwprintw(stdscr, getbegy(w) + 1, getmaxx(w) / 3, "%s\n", "RULES: ");
-    mvwprintw(stdscr, getbegy(w) + 2, getmaxx(w) / 3, "%s\n", "1. Your Hero can move (arrows)and shoot!(space)");
-    mvwprintw(stdscr, getbegy(w) + 3, getmaxx(w) / 3, "%s\n", "2. For improving the level you should kill 10 enemies.");
-    mvwprintw(stdscr, getbegy(w) + 4, getmaxx(w) / 3, "%s\n", "3. Collision with grass will take your life.");
-    mvwprintw(stdscr, getbegy(w) + 5, getmaxx(w) / 3, "%s\n", "4. Collision with ememy will take half of your life.");
-    mvwprintw(stdscr, getbegy(w) + 6, getmaxx(w) / 3, "%s\n", "5. Your goal is to kill 30 enemies");
-    mvwprintw(stdscr, getbegy(w) + 7, getmaxx(w) / 3, "%s\n", "ENJOY!!!");
+    mvwprintw(stdscr, getbegy(w) + 1, getmaxx(w) / 3, "%s", "RULES: ");
+    mvwprintw(stdscr, getbegy(w) + 2, getmaxx(w) / 3, "%s", "1. Your Hero can move (arrows)and shoot!(space)");
+    mvwprintw(stdscr, getbegy(w) + 3, getmaxx(w) / 3, "%s", "2. For improving the level you should kill 10 enemies.");
+    mvwprintw(stdscr, getbegy(w) + 4, getmaxx(w) / 3, "%s", "3. Collision with grass will take your life.");
+    mvwprintw(stdscr, getbegy(w) + 5, getmaxx(w) / 3, "%s", "4. Collision with ememy will take half of your life.");
+    mvwprintw(stdscr, getbegy(w) + 6, getmaxx(w) / 3, "%s", "5. Your goal is to kill 30 enemies");
+    mvwprintw(stdscr, getbegy(w) + 7, getmaxx(w) / 3, "%s", "ENJOY!!!");
 }
